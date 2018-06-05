@@ -1,20 +1,4 @@
-variable "zone" {
-  default = "europe-west1-b"
-}
-
-variable "tmp" {}
-
-variable "region" {
-  default = "europe-west1"
-}
-
-variable "name" {
-  default = "web"
-}
-
-variable "image" {
-  default = "ubuntu-os-cloud/ubuntu-1604-lts"
-}
+/**
 
 variable "service_port" {
   default = "80"
@@ -23,10 +7,6 @@ variable "service_port" {
 variable "server_port" {
   description = "The port"
   default     = "8080"
-}
-
-variable "project" {
-  default = "pk-gcp-project"
 }
 
 variable "protocol" {
@@ -42,29 +22,7 @@ variable "namefirewall" {
   default = "firewall"
 }
 
-provider "google" {
-  credentials = "pk-gcp-project-cd981c4118ab.json"
-  project     = "${var.project}"
-  region      = "${var.region}"
-}
 
-resource "google_compute_instance" "project" {
-  count        = 2
-  name         = "server${count.index + 1}"
-  machine_type = "f1-micro"
-  zone         = "${var.zone}"
-
-  boot_disk {
-    initialize_params {
-      image = "${var.image}"
-    }
-  }
-
-  network_interface {
-    network       = "default"
-    access_config = {}
-  }
-}
 
 resource "google_compute_forwarding_rule" "default" {
   project               = "${var.project}"
@@ -102,4 +60,14 @@ resource "google_compute_firewall" "test" {
     protocol = "${var.protocol}"
     ports    = "${var.ports}"
   }
+}
+**/
+module "servers" {
+  source = "../modules/instance/"
+  name   = "servers"
+
+  //  network = "${module.vpc.name}"
+  count = "2"
+  image = "${var.image}"
+  zone  = "${var.zone}"
 }
