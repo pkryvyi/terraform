@@ -13,3 +13,15 @@ variable "image" {
 variable "zone" {
   default = "europe-west1-b"
 }
+
+variable "project" {
+  default = "pk-gcp-project"
+}
+
+variable "region" {
+  default = "europe-west1"
+}
+
+variable "service_port" {
+  default = "80"
+}
