@@ -3,3 +3,17 @@ variable "image" {
 }
 
 variable "count" {}
+
+variable "project" {
+  default = "pk-gcp-project"
+}
+
+variable "region" {
+  default = "europe-west1"
+}
+
+variable "zone" {
+  default = "europe-west1-b"
+}
+
+variable "name" {}

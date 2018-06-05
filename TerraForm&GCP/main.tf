@@ -62,9 +62,9 @@ resource "google_compute_firewall" "test" {
   }
 }
 **/
-module "servers" {
-  source = "../modules/instance/"
-  name   = "servers"
+module "myservers" {
+  source = "modules/instance/"
+  name   = "myserver-"
 
   //  network = "${module.vpc.name}"
   count = "2"
