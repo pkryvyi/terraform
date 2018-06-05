@@ -2,6 +2,8 @@ variable "zone" {
   default = "europe-west1-b"
 }
 
+variable "tmp" {}
+
 variable "region" {
   default = "europe-west1"
 }
