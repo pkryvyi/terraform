@@ -2,8 +2,8 @@ variable "name" {
   default = "vpc"
 }
 
-variable "namefirawall" {
-  default = "firefall"
+variable "namefirewall" {
+  default = "firewall"
 }
 
 variable "ports" {

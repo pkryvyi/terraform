@@ -17,3 +17,11 @@ module "loadbalancer" {
   service_port = "${var.service_port}"
 }
 
+module "vpc" {
+  source = "modules/vpc"
+  name   = "vpc"
+
+  #namefirewall = "${module.vpc.name}firewall"
+  protocol = "tcp"
+  ports    = [22, 80, 8080, 3306]
+}
