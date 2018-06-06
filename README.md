@@ -15,5 +15,5 @@ Steps for run
 - Clone this project
 - Change some data(variables) on your personal(Credential, project name, zone&region etc)
 - Use command "$ terraform init" for download dependencies
-- Use command "$ terraform aplly" for creating infrastructure in GCP
+- Use command "$ terraform apply" for creating infrastructure in GCP
 - Use command "$ terraform destroy" for destroing infrastructure (if needed)*
