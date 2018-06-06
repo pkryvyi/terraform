@@ -1,4 +1,4 @@
-GCP&terraform
+#GCP&terraform
 This project provision of creating infrastructure on Google Cloud Platform with next configuration:
 - 2 f1-micro instances
 - 1 loadbalancer
