@@ -1,13 +1,14 @@
+#declaration our modules
+
 module "myservers" {
   source = "modules/instance/"
   name   = "myserver-"
-
-  //  network = "${module.vpc.name}"
-  count = "2"
-  image = "${var.image}"
-  zone  = "${var.zone}"
+  count  = "2"
+  image  = "${var.image}"
+  zone   = "${var.zone}"
 }
 
+#configuration of loadbalancer
 module "loadbalancer" {
   instances    = "${module.myservers.url}"
   source       = "modules/loadbalancer"
@@ -17,11 +18,10 @@ module "loadbalancer" {
   service_port = "${var.service_port}"
 }
 
+#declaration network configuration and ports
 module "vpc" {
-  source = "modules/vpc"
-  name   = "vpc"
-
-  #namefirewall = "${module.vpc.name}firewall"
+  source   = "modules/vpc"
+  name     = "vpc"
   protocol = "tcp"
   ports    = [22, 80, 8080, 3306]
 }
