@@ -25,3 +25,10 @@ module "vpc" {
   protocol = "tcp"
   ports    = [22, 80, 8080, 3306]
 }
+
+module "storage" {
+  source        = "module/storage"
+  name          = "petrokryvyi"
+  location      = "EU"
+  storage_class = "MULTI_REGIONAL"
+}
