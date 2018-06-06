@@ -20,10 +20,11 @@ module "loadbalancer" {
 
 #declaration network configuration and ports
 module "vpc" {
-  source   = "modules/vpc"
-  name     = "vpc"
-  protocol = "tcp"
-  ports    = [22, 80, 8080, 3306]
+  source       = "modules/vpc"
+  name         = "vpc"
+  namefirewall = "testfirewall"
+  protocol     = "tcp"
+  ports        = [22, 80, 8080, 3306]
 }
 
 module "storage" {
