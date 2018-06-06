@@ -1,3 +1,4 @@
+#list of variables, which we use in main.tf
 variable "credential" {
   default = "pk-gcp-project-cd981c4118ab.json"
 }
