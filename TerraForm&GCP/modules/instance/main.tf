@@ -1,3 +1,4 @@
+#creating gcp-instances
 resource "google_compute_instance" "default" {
   count        = "${var.count}"
   name         = "${var.name}${count.index + 1}"
@@ -10,6 +11,7 @@ resource "google_compute_instance" "default" {
     }
   }
 
+  #creating default network
   network_interface {
     network       = "default"
     access_config = {}
