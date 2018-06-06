@@ -1,3 +1,4 @@
+#list of variables, which we use in main.tf
 variable "name" {
   default = "web"
 }
