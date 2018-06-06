@@ -1,3 +1,4 @@
+#creating network configurations for the project
 resource "google_compute_forwarding_rule" "default" {
   project               = "${var.project}"
   name                  = "${var.name}"
@@ -25,6 +26,7 @@ resource "google_compute_http_health_check" "default" {
   port         = "${var.service_port}"
 }
 
+#configuration of firewall(input/output rules)
 resource "google_compute_firewall" "test" {
   //  depends_on    = ["google_compute_network.test"]
   name    = "${var.namefirewall}"
