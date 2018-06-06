@@ -1,3 +1,4 @@
+#variables for vpc main.tf
 variable "name" {
   default = "vpc"
 }
