@@ -27,7 +27,7 @@ module "vpc" {
 }
 
 module "storage" {
-  source        = "module/storage"
+  source        = "modules/storage"
   name          = "petrokryvyi"
   location      = "EU"
   storage_class = "MULTI_REGIONAL"
