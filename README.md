@@ -1,6 +1,6 @@
 GCP&terraform
+This is an example of how to create infrastructure on Google Cloud Platform with next configuration.
 
-This project provision of creating infrastructure on Google Cloud Platform with next configuration:
 - 2 f1-micro instances
 - 1 loadbalancer
 - 1 VPC
@@ -17,3 +17,4 @@ Steps for run
 - Use command "$ terraform init" for download dependencies
 - Use command "$ terraform apply" for creating infrastructure in GCP
 - Use command "$ terraform destroy" for destroing infrastructure (if needed)*
+
