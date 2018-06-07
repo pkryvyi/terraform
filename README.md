@@ -17,4 +17,3 @@ Steps for run
 - Use command "$ terraform init" for download dependencies
 - Use command "$ terraform apply" for creating infrastructure in GCP
 - Use command "$ terraform destroy" for destroing infrastructure (if needed)*
-#new comment
