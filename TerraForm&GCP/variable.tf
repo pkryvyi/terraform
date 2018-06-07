@@ -8,7 +8,7 @@ variable "credential" {
 }
 
 variable "image" {
-  default = "ubuntu-os-cloud/ubuntu-1604-lts"
+  default = "centos-7"
 }
 
 variable "zone" {
