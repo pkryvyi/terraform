@@ -11,10 +11,10 @@
 * [Terraform](https://www.terraform.io/downloads.html) version 0.11.*
 
 ## Setup GCP credentials
-Go to [GCP Console](https://console.cloud.google.com)
-    1. Create a Project with "project_name"
-    2. Create a Service Account for Project "project_name"[here](https://console.cloud.google.com/projectselector/iam-admin/serviceaccount)
-    3. From the list of Service Account choose your account, press on "Actions" and create JSON key
+Go to [GCP Console](https://console.cloud.google.com):
+    0. Create a Project with "project_name"
+    0. Create a Service Account for Project "project_name"[here](https://console.cloud.google.com/projectselector/iam-admin/serviceaccount)
+    0. From the list of Service Accounts choose your account, press on "Actions" and create JSON key
 
 ## For creating GCP infrastructure you need:
 * GCP account
